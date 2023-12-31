@@ -125,7 +125,7 @@ class MagicAnimate():
         
         print("Initialization Done!")
         
-    def __call__(self, source_image, motion_sequence, random_seed, step, guidance_scale, size=512, savedir = f"demo/outputs"):
+    def __call__(self, source_image, motion_sequence, random_seed, step, guidance_scale, savedir = f"demo/outputs", size=512):
             prompt = n_prompt = ""
             random_seed = int(random_seed)
             step = int(step)
@@ -191,4 +191,3 @@ class MagicAnimate():
             save_videos_grid(samples_per_video, animation_path)
             
             return animation_path
-            
